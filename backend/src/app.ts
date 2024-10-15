@@ -1,6 +1,6 @@
 import  express from "express";
 
-class App {
+export class App {
     public app: express.Express;
 
     constructor() {
@@ -20,7 +20,7 @@ class App {
         });
     }
 
-    private start(): void {
+    public start(): void {
         this.app.listen(3000, () => {
             console.log("Server running on port 3000");
         });
